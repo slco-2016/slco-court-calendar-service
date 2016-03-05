@@ -5,3 +5,5 @@
  + http://ruby-doc.org/core-2.2.0/Regexp.html
  + http://slacksite.com/other/ftp.html
  + https://github.com/s2t2/slco-residency-2016/blob/master/data-observations/vine/DICTIONARY.md
+ + http://stackoverflow.com/questions/5201383/how-to-convert-a-string-to-date-in-mysql
+ + http://www.csvjson.com/csv2json

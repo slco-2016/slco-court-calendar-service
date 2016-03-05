@@ -23,23 +23,42 @@ Some attributes describe similar concepts but use different prefixes (e.g. `jdmt
 
 ### `VineCase`
 
+There are 2,291 rows.
+ + all rows have `last_name`, `locn_code`, `party_num`, `case_num`
+ + 84 have a `bail_amt`
+ + 401 have a `booking_num`
+ + 1,039 have a `race_code`
+ + 972 have a `disp_code`
+ + 79 have a `disp_date`
+ + all but 5 have a `birth_date`
+ + all but 2 have a `first_name`; these defendants are corporations having the corporation name listed in the `last_name` attribute
+
 There are no unique row identifiers. :-/
 
 There are multiple rows per `case_num`, and there are no commonalities between rows which contain the same `case_num`.
 
-There are no multiple rows per `case_num` per `party_num`. This suggests a composite primary key on (`case_num`,`party_num`).
+There are no multiple rows per `case_num` per `party_num`. This suggests a possible composite primary key on (`case_num`,`party_num`).
 
 There are no multiple rows per `party_num`, which suggests `party_num` might be a unique identifier, however the more likely cause of this lack of duplication is the fact that a defendant/party happens not to have multiple cases in today's file.
 
+EDIT: There are no duplications for combinations of `locn_code` and `case_num`; this fact, coupled with our existing knowledge of how case numbers work, provides strong indication that there is a composite primary key on (`locn_code` and `case_num`).
+
 ### `VineCourtEvent`
+
+There are 2,804 rows.
 
 There are no unique row identifiers. :-/
 
 There are multiple rows per `case_num`, containing the same defendant information, indicating multiple court hearings on different dates and times.
 
+Some rows have `appear_date` values outside the expected range (e.g. "9007-01-02" and "3030-01-20"). :-/
+
 There are many overlapping attributes between this entity and the `CjsJudge` entity.
 
+
 ### `VineCharge`
+
+There are 5,752 rows.
 
 There are no unique row identifiers. :-/
 
@@ -50,11 +69,15 @@ Some `offense_descr` attribute values include "FAILURE TO APPEAR". We've been ho
 
 ### `VineDelete`
 
+There are 54 rows.
+
 There are no unique row identifiers. :-/
 
 There are multiple rows per `case_num`, each indicating a different `appear_date` which has been cancelled. There likely could be multiple calendar event deletions for the same combination of `case_num` and `appear_date`.
 
 ### `CjsJudge`
+
+There are 2,772 rows.
 
 There are no unique row identifiers. :-/
 
