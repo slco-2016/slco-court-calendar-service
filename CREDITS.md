@@ -11,3 +11,4 @@
  + https://www.relishapp.com/rspec/rspec-rails/docs/generators
  + http://stackoverflow.com/questions/4404787/whats-the-best-way-to-parse-a-tab-delimited-file-in-ruby
  + http://stackoverflow.com/questions/17441945/how-to-parse-xml-file-remotely-from-ftp-with-nokogiri-gem-without-downloading
+ + http://stackoverflow.com/questions/15905985/how-to-write-columns-header-to-a-csv-file-with-ruby

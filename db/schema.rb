@@ -17,22 +17,22 @@ ActiveRecord::Schema.define(version: 20160305183721) do
   enable_extension "plpgsql"
 
   create_table "vine_cases", force: :cascade do |t|
-    t.string   "locn_code",          null: false
+    t.string   "locn_code",   null: false
     t.string   "court_type"
-    t.string   "case_num",           null: false
+    t.string   "case_num",    null: false
+    t.integer  "party_num"
+    t.string   "booking_num"
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "party_num"
-    t.string   "disp_date"
-    t.string   "disp_code"
-    t.string   "bail_amt"
     t.date     "birth_date"
     t.string   "race_code"
     t.string   "gender"
-    t.string   "disposition_descry"
-    t.string   "booking_num"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.string   "disp_date"
+    t.string   "disp_code"
+    t.string   "disp_descr"
+    t.string   "bail_amt"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "vine_cases", ["birth_date"], name: "index_vine_cases_on_birth_date", using: :btree
