@@ -70,7 +70,18 @@ CREATE TABLE `vine_charges` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ````
 
-## `VineCalendarDelete`
+## `VineDelete`
+
+```` sql
+CREATE TABLE `vine_deletes` (
+  `de` varchar(255) DEFAULT NULL,
+  `locn_code` varchar(255) DEFAULT NULL,
+  `court_type` varchar(255) DEFAULT NULL,
+  `case_num` varchar(255) DEFAULT NULL,
+  `appear_date` varchar(255) DEFAULT NULL,
+  `hearing_code` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+````
 
 ## `CjsJudge`
 

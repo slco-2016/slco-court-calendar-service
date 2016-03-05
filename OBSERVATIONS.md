@@ -48,9 +48,11 @@ There are multiple rows per `case_num`, each row depicting a different charge. S
 Some `offense_descr` attribute values include "FAILURE TO APPEAR". We've been hoping to find data on FTAs, but how comprehensive is this coverage?
 
 
-### `VineCalendarDelete`
+### `VineDelete`
 
+There are no unique row identifiers. :-/
 
+There are multiple rows per `case_num`, each indicating a different `appear_date` which has been cancelled. There likely could be multiple calendar event deletions for the same combination of `case_num` and `appear_date`.
 
 ### `CjsJudge`
 

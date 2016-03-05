@@ -66,7 +66,7 @@ jdmt_date		| date of disposition of the charge
 judgment descr	| description of the disposition of the charge
 
 
-## `VineCalendarDelete`
+## `VineDelete`
 
 attribute | description
 --- | ---
