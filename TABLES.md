@@ -27,6 +27,25 @@ CREATE TABLE `vine_cases` (
 
 ## `VineCourtEvent`
 
+```` sql
+CREATE TABLE `vine_court_events` (
+  `ce` varchar(255) DEFAULT NULL,
+  `locn_code` varchar(255) DEFAULT NULL,
+  `court_type` varchar(255) DEFAULT NULL,
+  `party_num` int(11) DEFAULT NULL,
+  `case_num` varchar(255) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `appear_date` varchar(255) DEFAULT NULL,
+  `time` varchar(255) DEFAULT NULL,
+  `hearing_code` varchar(255) DEFAULT NULL,
+  `room` varchar(255) DEFAULT NULL,
+  `int_case_num` int(11) DEFAULT NULL,
+  `create_datetime` varchar(255) DEFAULT NULL,
+  `cancel_datetime` varchar(255) DEFAULT NULL,
+  `cancel_reason` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+````
 
 ## `VineCharge`
 
