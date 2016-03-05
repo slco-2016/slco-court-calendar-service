@@ -2,11 +2,31 @@
 
 ## Usage
 
-Extract VINE data from the SLCo FTP server.
+Visit production application at __________.
 
-```` sh
-bundle exec rake extract:vine_files
-````
+Request data from the API.
+
+### API
+
+#### Event Search
+
+Responds with zero or more court calendar events.
+
+`GET /api/v0/event-search.json`
+
+##### Search Parameters
+
+Specify one or more search parameters. A result will be included in the response if it matches ALL request conditions.
+
+event_search_parameter | description | example
+--- | --- | ---
+`first_name` | The defendant's first name. | `MICHAEL`
+`last_name` | The defendant's last name. | `LOPEZ`
+`birth_date` | The defendant date of birth in YYYY-MM-DD format. | `1988-04-05`
+
+
+
+
 
 ## Contributing
 
@@ -46,6 +66,12 @@ Create and migrate the development database.
 bundle exec rake db:create
 bundle exec rake db:migrate
 bundle exec rake db:seed
+````
+
+Extract VINE data from the SLCo FTP server.
+
+```` sh
+bundle exec rake extract:vine_files
 ````
 
 ### Testing
