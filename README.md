@@ -2,7 +2,7 @@
 
 ## Usage
 
-Visit production application at __________.
+Visit production application at https://slco-court-calendar-service.herokuapp.com/.
 
 Request data from the API.
 
@@ -86,4 +86,12 @@ Add features and corresponding tests, then run tests.
 
 ```` sh
 bundle exec rspec spec/
+````
+
+### Deploying
+
+Deploy to production.
+
+```` sh
+git push heroku master
 ````

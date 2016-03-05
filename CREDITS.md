@@ -13,3 +13,5 @@
  + http://stackoverflow.com/questions/17441945/how-to-parse-xml-file-remotely-from-ftp-with-nokogiri-gem-without-downloading
  + http://stackoverflow.com/questions/15905985/how-to-write-columns-header-to-a-csv-file-with-ruby
  + http://stackoverflow.com/questions/24642005/rails-association-with-multiple-foreign-keys
+ + https://github.com/opensaltlake/utah-court-calendar-service/
+ + http://data-creative.info/process-documentation/2015/07/25/how-to-deploy-a-rails-app-to-heroku.html
