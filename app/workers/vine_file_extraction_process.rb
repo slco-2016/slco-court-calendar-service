@@ -14,6 +14,7 @@ class VineFileExtractionProcess
 
     Net::FTP.open(SLCO_FTP_HOST, SLCO_FTP_USER, SLCO_FTP_PASSWORD) do |ftp|
       @ftp = ftp
+      @ftp.passive = true if Rails.env.production?
 
       #
       # EXTRACT CASES
