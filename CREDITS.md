@@ -7,3 +7,4 @@
  + https://github.com/s2t2/slco-residency-2016/blob/master/data-observations/vine/DICTIONARY.md
  + http://stackoverflow.com/questions/5201383/how-to-convert-a-string-to-date-in-mysql
  + http://www.csvjson.com/csv2json
+ + http://data-creative.info/process-documentation/2015/06/18/how-to-make-rails-app.html
