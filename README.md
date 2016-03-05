@@ -2,7 +2,7 @@
 
 ## Usage
 
-Visit production application at __________.
+Visit production application at https://slco-court-calendar-service.herokuapp.com/.
 
 Request data from the API.
 

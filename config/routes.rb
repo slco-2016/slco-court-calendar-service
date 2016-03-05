@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'api/v0/api#index'
+
   namespace :api do
     namespace :v0 do
       get 'event-search' => 'api#event_search'
