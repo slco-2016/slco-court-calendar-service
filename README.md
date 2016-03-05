@@ -39,3 +39,11 @@ bundle exec rake db:create
 bundle exec rake db:migrate
 bundle exec rake db:seed
 ````
+
+### Testing
+
+Add features and corresponding tests. Run tests:
+
+```` sh
+bundle exec rspec spec/
+````
