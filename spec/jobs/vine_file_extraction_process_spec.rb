@@ -24,5 +24,11 @@ RSpec.describe VineFileExtractionProcess, type: :job do
       VineFileExtractionProcess.perform
       expect(VineCase.count).to be > 0
     end
+
+    it "should persist event data from 'incoming' vine files" do
+      VineCourtEvent.delete_all
+      VineFileExtractionProcess.perform
+      expect(VineCourtEvent.count).to be > 0
+    end
   end
 end

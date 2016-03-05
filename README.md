@@ -40,7 +40,7 @@ ALTER USER courtbot_slco WITH SUPERUSER;
 \q
 ````
 
-Create and migrate database.
+Create and migrate the development database.
 
 ```` sh
 bundle exec rake db:create
@@ -50,7 +50,13 @@ bundle exec rake db:seed
 
 ### Testing
 
-Add features and corresponding tests. Run tests:
+Create and migrate the test database.
+
+```` sh
+bundle exec rake db:test:prepare
+````
+
+Add features and corresponding tests, then run tests.
 
 ```` sh
 bundle exec rspec spec/

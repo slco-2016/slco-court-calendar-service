@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160305183721) do
+ActiveRecord::Schema.define(version: 20160305212711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,5 +42,30 @@ ActiveRecord::Schema.define(version: 20160305183721) do
   add_index "vine_cases", ["locn_code", "case_num"], name: "vine_case_composite_key", unique: true, using: :btree
   add_index "vine_cases", ["locn_code"], name: "index_vine_cases_on_locn_code", using: :btree
   add_index "vine_cases", ["party_num"], name: "index_vine_cases_on_party_num", using: :btree
+
+  create_table "vine_court_events", force: :cascade do |t|
+    t.string   "locn_code"
+    t.string   "case_num"
+    t.string   "court_type"
+    t.integer  "party_num"
+    t.string   "hearing_code"
+    t.integer  "int_case_num"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.date     "appear_date"
+    t.time     "time"
+    t.string   "room"
+    t.datetime "create_datetime"
+    t.datetime "cancel_datetime"
+    t.string   "cancel_reason"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "vine_court_events", ["appear_date"], name: "index_vine_court_events_on_appear_date", using: :btree
+  add_index "vine_court_events", ["case_num"], name: "index_vine_court_events_on_case_num", using: :btree
+  add_index "vine_court_events", ["locn_code", "case_num"], name: "event_case_foreign_composite_key", using: :btree
+  add_index "vine_court_events", ["locn_code"], name: "index_vine_court_events_on_locn_code", using: :btree
+  add_index "vine_court_events", ["room"], name: "index_vine_court_events_on_room", using: :btree
 
 end
