@@ -2,24 +2,31 @@
 
 This document describes data posted as part of the Victim Information and Notification Everyday (VINE) system.
 
-## `Case`
+## `VineCase`
 
+There are no unique row identifiers. :-/
 
-## `CourtEvent`
+There are multiple rows per `case_num`, and there are no commonalities between rows which contain the same `case_num`.
 
+There are no multiple rows per `case_num` per `party_num`. This suggests a composite primary key on (`case_num`,`party_num`).
 
+There are no multiple rows per `party_num`, which suggests `party_num` might be a unique identifier, however the more likely cause of this lack of duplication is the fact that a defendant/party happens not to have multiple cases in today's file.
 
-
-## `Charge`
-
-
-
-
-## `CalendarDelete`
+## `VineCourtEvent`
 
 
 
-## `Judge`
+
+## `VineCharge`
+
+
+
+
+## `VineCalendarDelete`
+
+
+
+## `CjsJudge`
 
 There are no unique row identifiers. :-/
 

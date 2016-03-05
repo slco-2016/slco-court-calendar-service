@@ -2,7 +2,7 @@
 
 This document describes data posted as part of the Victim Information and Notification Everyday (VINE) system.
 
-## `Case`
+## `VineCase`
 
 attribute | description
 --- | ---
@@ -23,7 +23,7 @@ gender			 | gender of the defendant
 disposition descry	| description of the case disposition code
 booking_num		| booking number of the defendant.
 
-## `CourtEvent`
+## `VineCourtEvent`
 
 attribute | description
 --- | ---
@@ -44,7 +44,7 @@ cancel_datetime | 	datetime the event was cancelled (if not null)
 cancel_reason	 | 	reason for cancellation
 
 
-## `Charge`
+## `VineCharge`
 
 attribute | description
 --- | ---
@@ -66,7 +66,7 @@ jdmt_date		| date of disposition of the charge
 judgment descr	| description of the disposition of the charge
 
 
-## `CalendarDelete`
+## `VineCalendarDelete`
 
 attribute | description
 --- | ---
@@ -77,7 +77,7 @@ case_num		 | court assigned 9-digit case number
 appear_date	 | 	appearance date of the event to be deleted
 hearing_code | 		hearing code of the event to be deleted.
 
-## `Judge`
+## `CjsJudge`
 
 attribute | description
 --- | ---
