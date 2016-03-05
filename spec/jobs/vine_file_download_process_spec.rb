@@ -6,7 +6,7 @@ RSpec.describe VineFileDownloadProcess, type: :job do
     "vine_charge.ul","vine_court_event.ul","vine_delete.ul"
   ] }
 
-  describe "perform" do
+  describe "#perform" do
     it "should download 'incoming' vine files from the slco ftp server" do
       incoming_file_names.each do |file_name|
         file = Rails.root.join("slco/vine/incoming/#{file_name}")

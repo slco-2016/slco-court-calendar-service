@@ -1,5 +1,13 @@
 # Salt Lake County (SLCo) Court Calendar Service
 
+## Usage
+
+Extract VINE data from the SLCo FTP server.
+
+```` sh
+bundle exec rake extract:vine_files
+````
+
 ## Contributing
 
 ### Prerequisites

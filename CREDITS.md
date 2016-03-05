@@ -9,3 +9,5 @@
  + http://www.csvjson.com/csv2json
  + http://data-creative.info/process-documentation/2015/06/18/how-to-make-rails-app.html
  + https://www.relishapp.com/rspec/rspec-rails/docs/generators
+ + http://stackoverflow.com/questions/4404787/whats-the-best-way-to-parse-a-tab-delimited-file-in-ruby
+ + http://stackoverflow.com/questions/17441945/how-to-parse-xml-file-remotely-from-ftp-with-nokogiri-gem-without-downloading
