@@ -49,6 +49,26 @@ CREATE TABLE `vine_court_events` (
 
 ## `VineCharge`
 
+```` sql
+CREATE TABLE `vine_charges` (
+  `ch` varchar(255) DEFAULT NULL,
+  `locn_code` varchar(255) DEFAULT NULL,
+  `court_type` varchar(255) DEFAULT NULL,
+  `party_num` int(11) DEFAULT NULL,
+  `case_num` varchar(255) DEFAULT NULL,
+  `viol_code` varchar(255) DEFAULT NULL,
+  `severity` varchar(255) DEFAULT NULL,
+  `seq` int(11) DEFAULT NULL,
+  `amt_due` varchar(255) DEFAULT NULL,
+  `jdmt_code` varchar(255) DEFAULT NULL,
+  `case_type` varchar(255) DEFAULT NULL,
+  `offense_descr` varchar(255) DEFAULT NULL,
+  `viol_datetime` varchar(255) DEFAULT NULL,
+  `arrest_date` varchar(255) DEFAULT NULL,
+  `jdmt_date` varchar(255) DEFAULT NULL,
+  `judgment_descr` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+````
 
 ## `VineCalendarDelete`
 
