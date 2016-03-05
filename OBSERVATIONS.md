@@ -9,7 +9,7 @@ This document describes considerations for importing VINE data files into a data
  + Fields are separated by `\t`.
  + Fields are enclosed by `"`.
  + Fields are escaped by `\ or "`.
- + Lines are terminated by `\n`.
+ + Lines are terminated by `\n`. EDIT: only because I imported them by skipping the last column, else lines are terminated by `\r\r\n`.
  + each file contains a first column which is non-functional except it identifies the type of file.
  + each file contains a last column which is empty.
 
