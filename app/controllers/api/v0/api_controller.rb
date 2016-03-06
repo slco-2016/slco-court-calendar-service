@@ -30,11 +30,11 @@ class Api::V0::ApiController < ApplicationController
         "court_type": r.court_type,
         "case_number": r.case_number,
         "party_number": r.party_number,
-        "defendant_first_name": r.first_name,
-        "defendant_last_name": r.last_name,
+        "defendant_first_name": r.first_name.try(:strip),
+        "defendant_last_name": r.last_name.try(:strip),
         "defendant_birth_date": r.birth_date,
         "appear_date": r.appear_date,
-        "appear_time": r.appear_time,
+        "appear_time": r.time.try(:strftime, "%k:%M"),
         "hearing_code": r.hearing_code,
         "court_room": r.court_room
       }

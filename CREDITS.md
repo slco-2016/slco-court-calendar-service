@@ -16,3 +16,4 @@
  + https://github.com/opensaltlake/utah-court-calendar-service/
  + http://data-creative.info/process-documentation/2015/07/25/how-to-deploy-a-rails-app-to-heroku.html
  + http://stackoverflow.com/questions/13752580/trying-to-download-file-from-ftp-results-in-an-500-illegal-port-command-error
+ + http://rubyquicktips.com/post/4517067210/format-a-string-from-a-time-object

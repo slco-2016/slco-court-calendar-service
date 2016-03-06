@@ -20,8 +20,8 @@ Specify one or more search parameters. A result will be included in the response
 
 event_search_parameter | description | example
 --- | --- | ---
-`first_name` | The defendant's first name. | `MICHAEL`
-`last_name` | The defendant's last name. | `LOPEZ`
+`first_name` | The defendant's first name. | `KARL`
+`last_name` | The defendant's last name. | `MALONE`
 `birth_date` | The defendant date of birth in YYYY-MM-DD format. | `1988-04-05`
 
 
