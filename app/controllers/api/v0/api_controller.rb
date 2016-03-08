@@ -1,6 +1,5 @@
 class Api::V0::ApiController < ApplicationController
   def index
-    #code
   end
 
   # Search for one or more events. Results include events which match all conditions.

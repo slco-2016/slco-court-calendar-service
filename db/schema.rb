@@ -11,10 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160305212711) do
+ActiveRecord::Schema.define(version: 20160308225232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "requests", force: :cascade do |t|
+    t.integer  "developer_account_id"
+    t.string   "api_key"
+    t.string   "session_id"
+    t.string   "uuid"
+    t.string   "language"
+    t.string   "ip_address"
+    t.text     "user_agent"
+    t.text     "url"
+    t.text     "referrer"
+    t.boolean  "ssl"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "requests", ["api_key"], name: "index_requests_on_api_key", using: :btree
+  add_index "requests", ["developer_account_id"], name: "index_requests_on_developer_account_id", using: :btree
+  add_index "requests", ["session_id"], name: "index_requests_on_session_id", using: :btree
+  add_index "requests", ["uuid"], name: "index_requests_on_uuid", using: :btree
 
   create_table "vine_cases", force: :cascade do |t|
     t.string   "locn_code",   null: false
