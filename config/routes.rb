@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :developer_accounts
+
   root 'api/v0/api#index'
 
   namespace :api do

@@ -8,7 +8,20 @@
 </head>
 <body>
 
-<%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <header>
+    <h1>Salt Lake County (SLCo) Court Calendar Service</h1>
+  </header>
+
+  <%= yield %>
+
+  <footer style="margin-top:2em;">
+    <p>
+      <%= link_to "source", "https://github.com/slco-2016/slco-court-calendar-service/" %>
+    </p>
+  </footer>
 
 </body>
 </html>
