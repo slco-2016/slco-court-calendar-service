@@ -38,6 +38,7 @@ gem 'yard', group: :doc # run `bundle exec yard doc` to parse comments and/or `b
 group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '~> 3.0'
+  gem 'mailcatcher'
   #gem "factory_girl_rails", "~> 4.0"
 end
 
@@ -53,3 +54,5 @@ group :production do
   gem 'rails_12factor'
   gem 'puma'
 end
+
+gem 'devise'
