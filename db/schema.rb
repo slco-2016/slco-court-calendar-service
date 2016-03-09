@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160308233215) do
+ActiveRecord::Schema.define(version: 20160309000232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "api_keys", force: :cascade do |t|
+    t.integer  "developer_account_id", null: false
+    t.string   "secret",               null: false
+    t.datetime "revoked_at"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "api_keys", ["developer_account_id"], name: "index_api_keys_on_developer_account_id", using: :btree
+  add_index "api_keys", ["secret"], name: "index_api_keys_on_secret", unique: true, using: :btree
 
   create_table "developer_accounts", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

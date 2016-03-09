@@ -2,13 +2,15 @@ Rails.application.routes.draw do
 
   devise_for :developer_accounts
 
-  root 'api/v0/api#index'
+  root 'api_keys#show'
 
   namespace :api do
     namespace :v0 do
       get 'event-search' => 'api#event_search'
     end
   end
+
+  get 'api_key/regenerate' => 'api_keys#regenerate', :as => 'regenerate_api_key'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,10 +1,6 @@
 class Api::V0::ApiController < ApiController
   RECOGNIZED_SEARCH_PARAMETERS = ["api_key","first_name","last_name", "birth_date"]
 
-  def index
-    #code
-  end
-
   # Search for one or more events. Results include events which match all conditions.
   #
   # @param [Hash] params
@@ -18,7 +14,7 @@ class Api::V0::ApiController < ApiController
     results = [] # should default to empty
     search_params = params.reject{|k,v| ["controller","format","action"].include?(k) }
 
-    api_key = params["api_key"] # ApiKey.find_by_secret(params["api_key"])
+    api_key = ApiKey.find_by_secret(params["api_key"])
     first_name = params["first_name"].try(:upcase)
     last_name = params["last_name"].try(:upcase)
     birth_date = params["birth_date"] #todo: add error unless in "yyyy-mm-dd" format
@@ -28,8 +24,7 @@ class Api::V0::ApiController < ApiController
       errors << UnrecognizedEventSearchParameter.new(unrecognized_search_param).message
     end
 
-    #if api_key.is_a?(ApiKey) && api_key.unrevoked?
-    if params["api_key"] == "my_key"
+    if api_key.is_a?(ApiKey) && api_key.unrevoked?
       results = VineCourtEvent.joins("JOIN vine_cases ON vine_cases.locn_code = vine_court_events.locn_code AND vine_cases.case_num = vine_court_events.case_num").select("vine_court_events.*, vine_cases.*") if first_name || last_name || birth_date
       results = results.where("UPPER(vine_court_events.first_name) LIKE ?", "%#{first_name}%") if first_name
       results = results.where("UPPER(vine_court_events.last_name) LIKE ?", "%#{last_name}%") if last_name
